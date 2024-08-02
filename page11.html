@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Current Stocks</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-color: rgb(201, 236, 201);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2em;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    table {
+      font-family: Arial, sans-serif;
+      border-collapse: collapse;
+      width: 80%;
+      margin-bottom: 20px;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+    }
+
+    th, td {
+      border: 1px solid #333;
+      text-align: left;
+      padding: 12px;
+    }
+
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+    .top-left-text {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 1em;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+  <p class="top-left-text">🅴🅰🆂🆈 🅸🅽🆅🅴🆂🆃</p>
+  <h2>Current Stocks</h2>
+  <p>Stocks</p>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Amount</th>
+      <th>Buy</th>
+      <th>Sell</th>
+    </tr>
+    <tr>
+      <td>Stock 1</td>
+      <td id="stockAmount">$3</td>
+      <td><button type="button" onclick="buyStock()">Buy</button></td>
+      <td><button type="button" onclick="sellStock()">Sell</button></td>
+    </tr>
+  </table>
+  <h2>Total Amount: <span id="totalAmount">$3</span></h2>
+  <button type="button" onclick="window.location.href='/page3.html'">Back</button>
+
+  <script>
+    let amount = 3;
+
+    function updateTotalAmount() {
+      const totalAmountElement = document.getElementById('totalAmount');
+      totalAmountElement.innerText = `$${amount}`;
+    }
+
+    function buyStock() {
+      amount += 3;
+      document.getElementById('stockAmount').innerText = `$${amount}`;
+      updateTotalAmount();
+    }
+
+    function sellStock() {
+      if (amount > 0) {
+        amount -= 3;
+        document.getElementById('stockAmount').innerText = `$${amount}`;
+        updateTotalAmount();
+      }
+    }
+  </script>
+</body>
+
+</html>

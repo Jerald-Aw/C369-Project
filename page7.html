@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-color: rgb(201, 236, 201);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 2em;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    table {
+      font-family: Arial, sans-serif;
+      border-collapse: collapse;
+      width: 80%;
+      margin-bottom: 20px;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+    }
+
+    th, td {
+      border: 1px solid #333;
+      text-align: left;
+      padding: 12px;
+    }
+
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+    .top-left-text {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 1em;
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+  <p class="top-left-text">🅴🅰🆂🆈 🅸🅽🆅🅴🆂🆃</p>
+  <h2>Cart</h2>
+  <p>Items in cart</p>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Amount</th>
+      <th>Add</th>
+      <th>Delete</th>
+    </tr>
+    <tr>
+      <td>Stock 1</td>
+      <td id="amount">$3</td>
+      <td><button type="button" onclick="addAmount()">Add</button></td>
+      <td><button type="button" onclick="deleteAmount()">Delete</button></td>
+    </tr>
+  </table>
+  <h2>Total Price: <span id="totalPrice">$3</span></h2>
+  <button type="button" onclick="window.location.href='/page9.html'">Checkout</button>
+
+  <script>
+    let amount = 3;
+
+    function updateTotalPrice() {
+      const totalPriceElement = document.getElementById('totalPrice');
+      totalPriceElement.innerText = `$${amount}`;
+    }
+
+    function addAmount() {
+      amount += 3;
+      document.getElementById('amount').innerText = `$${amount}`;
+      updateTotalPrice();
+    }
+
+    function deleteAmount() {
+      if (amount > 0) {
+        amount -= 3;
+        document.getElementById('amount').innerText = `$${amount}`;
+        updateTotalPrice();
+      }
+    }
+  </script>
+</body>
+
+</html>

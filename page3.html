@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homepage</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-color: rgb(201, 236, 201);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    h2 {
+      margin: 20px 0;
+      font-size: 2em;
+      color: #333;
+    }
+
+    .button-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      width: 100%;
+      max-width: 1200px;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      flex: 1 1 calc(25% - 40px);
+      margin: 10px;
+      max-width: calc(25% - 40px);
+      box-sizing: border-box;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.2s;
+    }
+
+    .section:hover {
+      transform: translateY(-5px);
+    }
+
+    .section h1 {
+      font-size: 1.5em;
+      color: #4CAF50;
+      margin: 0 0 20px 0;
+    }
+
+    .section button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 1em;
+      border-radius: 5px;
+      transition: background-color 0.2s;
+    }
+
+    .section button:hover {
+      background-color: #45a049;
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      width: 100%;
+      max-width: 1800px;
+    }
+
+    .image-section {
+      text-align: center;
+      flex: 1;
+    }
+
+    .image-section img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      border-radius: 50px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .image-section p {
+      margin-top: 10px;
+      font-size: 1em;
+      color: #333;
+    }
+
+    .image-section {
+      max-width: 45%;
+    }
+
+    .top-left-text {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 1em;
+      color: #333;
+    }
+
+    .button-group {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <p class="top-left-text">🅴🅰🆂🆈 🅸🅽🆅🅴🆂🆃</p>
+  <h2>Homepage</h2>
+
+  <div class="button-container">
+    <div class="section">
+      <h1>Wallet</h1>
+      <button onclick="window.location.href='/wallet.html';">Go to Wallet</button>
+    </div>
+    <div class="section">
+      <h1>Find More Investments</h1>
+      <button onclick="window.location.href='/page4.html';">Explore Investments</button>
+    </div>
+    <div class="section">
+      <h1>View Previous Transactions</h1>
+      <button onclick="window.location.href='/page12.html';">View Transactions</button>
+    </div>
+    <div class="section">
+      <h1>Current Stocks</h1>
+      <button onclick="window.location.href='/page11.html';">View Stocks</button>
+    </div>
+  </div>
+
+  <div class="image-container">
+    <div class="image-section">
+      <img src="what-are-different-types-of-stocks.jpg.optimal.jpg" alt="First Image">
+      <p>To make sure that people get the safety they deserve in the investment scene. Our website, smartinvest, would gift to the world a easy way to invest which is simple for all. We solve the issue of safety from scammers and the hastle of the over-complexity of mordern day websites which have far too many options to choose from.</p>
+    </div>
+    <div class="image-section">
+      <img src="customerserviceimages.png" alt="Second Image">
+      <p>We are dedicated to our customers to ensure that we give a constantly improving website. We would listen to feedback given to us and improve constantly for the constant betterment of our website.</p>
+      <div class="button-group">
+        <button onclick="window.location.href='/feedback.html';">Feedback</button>
+        <button onclick="window.location.href='/aboutus.html';">About Us</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+
