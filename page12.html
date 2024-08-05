@@ -86,6 +86,16 @@
       font-size: 1em;
       color: #333;
     }
+    footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 0.9em;
+    }
   </style>
 </head>
 
@@ -97,20 +107,42 @@
     <tr>
       <th>Transaction ID</th>
       <th>Name</th>
-      <th>Total Amount</th>
+      <th>Quantity</th>
+      <th>Price</th>
       <th>Action</th>
       <th>Date</th>
     </tr>
+    
     <tr>
-      <td>0000</td>
-      <td><a href="page10.html">Stock 1</a></td>
+      <td>0002</td>
+      <td><a href="page10.html">Singtel</a></td>
+      <td>1</td>
       <td>$3</td>
-      <td>Bought</td>
+      <td>bought</td>
+      <td>30/07/2024</td>
+    </tr>
+    <tr>
+      <td>0001</td>
+      <td><a href="page10.html">Singtel</a></td>
+      <td>1</td>
+      <td>$3.15</td>
+      <td>sold</td>
       <td>26/07/2024</td>
     </tr>
+    <tr>
+      <td>0000</td>
+      <td><a href="page10.html">Singtel</a></td>
+      <td>1</td>
+      <td>$3</td>
+      <td>Bought</td>
+      <td>26/07/2023</td>
+    </tr>
   </table>
-  <h2>Total Price: $3</h2>
+  <h2>Total Quantity: 1</h2>
   <button type="button" onclick="window.location.href='/page3.html'">Home</button>
+  <footer>
+    &copy; 2024 Easy Invest. All rights reserved.
+  </footer>
 </body>
 
 </html>

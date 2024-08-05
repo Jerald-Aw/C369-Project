@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feedback Information</title>
+  <title>Sign up</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -26,56 +26,53 @@
 
     .form-container {
       background-color: white;
-      padding: 20px;
+      padding: 30px;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      width: 100%;
-      max-width: 500px;
+      width: 300px;
+      text-align: center;
     }
 
     .form-group {
       margin-bottom: 15px;
+      text-align: left;
     }
 
     .form-group label {
       display: block;
       margin-bottom: 5px;
       font-weight: bold;
-      color: #333;
     }
 
-    .form-group input,
-    .form-group textarea {
+    .form-group input {
       width: 100%;
       padding: 10px;
-      border: 1px solid #ddd;
+      border: 1px solid #ccc;
       border-radius: 5px;
-      font-size: 1em;
+      box-sizing: border-box;
     }
 
-    .form-group textarea:focus {
-      border-color: #4CAF50;
-      outline: none;
-    }
-
-    .form-group textarea {
-      resize: vertical;
-      height: 100px; /* Adjust the height as needed */
-    }
-
-    button {
+    .form-group button {
       background-color: #4CAF50;
       color: white;
       padding: 10px 20px;
       border: none;
       border-radius: 5px;
       cursor: pointer;
+      width: 100%;
       font-size: 1em;
-      transition: background-color 0.2s;
     }
 
-    button:hover {
+    .form-group button:hover {
       background-color: #45a049;
+    }
+
+    .top-left-text {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 1em;
+      color: #333;
     }
     footer {
       position: absolute;
@@ -91,25 +88,25 @@
 </head>
 
 <body>
-  <h1>Feedback Information</h1>
+  <p class="top-left-text">🅴🅰🆂🆈 🅸🅽🆅🅴🆂🆃</p>
+  <h1>Sign Up</h1>
+  
   <div class="form-container">
     <div class="form-group">
-      <label for="name">Feedback Subject:</label>
-      <input type="text" id="name" name="name" required>
+        <label for="Name">Name:</label>
+        <input type="name" id="name" name="name" required>
+      </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
     </div>
     <div class="form-group">
-      <label for="feedback-issue">Feedback Issue:</label>
-      <textarea id="feedback-issue" name="feedback-issue" required></textarea>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
     </div>
     <div class="form-group">
-      <label for="comments">Other Comments:</label>
-      <input type="text" id="comments" name="comments">
+      <button type="submit" onclick="window.location.href='/index.html'">Sign up</button>
     </div>
-    <button type="submit" onclick="window.location.href='/confirm.html'">Next</button>
   </div>
-  <footer>
-    &copy; 2024 Easy Invest. All rights reserved.
-  </footer>
 </body>
-
 </html>

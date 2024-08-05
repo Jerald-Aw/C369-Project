@@ -64,12 +64,23 @@
     button:hover {
       background-color: #45a049;
     }
+    
     .top-left-text {
       position: absolute;
       top: 10px;
       left: 10px;
       font-size: 1em;
       color: #333;
+    }
+    footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 0.9em;
     }
   </style>
 </head>
@@ -81,19 +92,26 @@
     <thead>
       <tr>
         <th>Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
         <th>Amount</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Stock 1</td>
+        <td>Singtel</td>
+        <td>1</td>
+        <td>$3</td>
         <td>$3</td>
       </tr>
     </tbody>
   </table>
   <h2>Total Price: $3</h2>
+  <h2>Total Amount: 1</h2>
   <h2>Wallet Balance: $20</h2>
   <button type="button" onclick="window.location.href='/page10.html'">Checkout</button>
-
 </body>
+<footer>
+  &copy; 2024 Easy Invest. All rights reserved.
+</footer>
 </html>

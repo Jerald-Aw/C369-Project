@@ -70,12 +70,23 @@
     button:hover {
       background-color: #45a049;
     }
+
     .top-left-text {
       position: absolute;
       top: 10px;
       left: 10px;
       font-size: 1em;
       color: #333;
+    }
+    footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 0.9em;
     }
   </style>
 </head>
@@ -87,42 +98,48 @@
   <table>
     <tr>
       <th>Name</th>
-      <th>Amount</th>
+      <th>Quantity</th>
+      <th>Price</th>
       <th>Add</th>
       <th>Delete</th>
     </tr>
     <tr>
-      <td>Stock 1</td>
-      <td id="amount">$3</td>
+      <td>Sigtel</td>
+      <td id="quantity">1</td>
+      <td>$3</td>
       <td><button type="button" onclick="addAmount()">Add</button></td>
       <td><button type="button" onclick="deleteAmount()">Delete</button></td>
     </tr>
   </table>
   <h2>Total Price: <span id="totalPrice">$3</span></h2>
+  <h2>Total Amount: <span id="totalAmount">1</span></h2>
   <button type="button" onclick="window.location.href='/page9.html'">Checkout</button>
 
   <script>
-    let amount = 3;
+    let quantity = 1;
+    const unitPrice = 3;
 
-    function updateTotalPrice() {
-      const totalPriceElement = document.getElementById('totalPrice');
-      totalPriceElement.innerText = `$${amount}`;
+    function updateTotals() {
+      document.getElementById('totalPrice').innerText = `$${quantity * unitPrice}`;
+      document.getElementById('totalAmount').innerText = `${quantity}`;
     }
 
     function addAmount() {
-      amount += 3;
-      document.getElementById('amount').innerText = `$${amount}`;
-      updateTotalPrice();
+      quantity += 1;
+      document.getElementById('quantity').innerText = `${quantity}`;
+      updateTotals();
     }
 
     function deleteAmount() {
-      if (amount > 0) {
-        amount -= 3;
-        document.getElementById('amount').innerText = `$${amount}`;
-        updateTotalPrice();
+      if (quantity > 0) {
+        quantity -= 1;
+        document.getElementById('quantity').innerText = `${quantity}`;
+        updateTotals();
       }
     }
   </script>
 </body>
-
+<footer>
+  &copy; 2024 Easy Invest. All rights reserved.
+</footer>
 </html>

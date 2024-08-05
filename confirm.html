@@ -1,3 +1,7 @@
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,6 +50,9 @@
       transition: transform 0.2s;
     }
 
+    .section:hover {
+      transform: translateY(-5px);
+    }
 
     .section h1 {
       font-size: 1.5em;
@@ -64,6 +71,9 @@
       transition: background-color 0.2s;
     }
 
+    .section button:hover {
+      background-color: #45a049;
+    }
 
     .image-container {
       display: flex;
@@ -160,11 +170,15 @@
       </div>
     </div>
   </div>
+  <script>
+    window.onload = function() {
+      alert("Your feedback has been sent");
+    }
+  </script>
   <footer>
     &copy; 2024 Easy Invest. All rights reserved.
   </footer>
 </body>
 
 </html>
-
 

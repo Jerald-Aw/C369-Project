@@ -70,12 +70,22 @@
     button:hover {
       background-color: #45a049;
     }
+
     .top-left-text {
       position: absolute;
       top: 10px;
       left: 10px;
       font-size: 1em;
       color: #333;
+    }    footer {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 0.9em;
     }
   </style>
 </head>
@@ -87,13 +97,15 @@
   <table>
     <tr>
       <th>Name</th>
-      <th>Amount</th>
+      <th>Quantity</th>
+      <th>Price</th>
       <th>Buy</th>
       <th>Sell</th>
     </tr>
     <tr>
-      <td>Stock 1</td>
-      <td id="stockAmount">$3</td>
+      <td>Singtel</td>
+      <td id="stockQuantity">1</td>
+      <td>$3</td>
       <td><button type="button" onclick="buyStock()">Buy</button></td>
       <td><button type="button" onclick="sellStock()">Sell</button></td>
     </tr>
@@ -102,27 +114,30 @@
   <button type="button" onclick="window.location.href='/page3.html'">Back</button>
 
   <script>
-    let amount = 3;
+    let quantity = 1;
+    const pricePerStock = 3;
 
     function updateTotalAmount() {
       const totalAmountElement = document.getElementById('totalAmount');
-      totalAmountElement.innerText = `$${amount}`;
     }
 
     function buyStock() {
-      amount += 3;
-      document.getElementById('stockAmount').innerText = `$${amount}`;
+      quantity += 1;
+      document.getElementById('stockQuantity').innerText = quantity;
       updateTotalAmount();
     }
 
     function sellStock() {
-      if (amount > 0) {
-        amount -= 3;
-        document.getElementById('stockAmount').innerText = `$${amount}`;
+      if (quantity > 0) {
+        quantity -= 1;
+        document.getElementById('stockQuantity').innerText = quantity;
         updateTotalAmount();
       }
     }
   </script>
+  <footer>
+    &copy; 2024 Easy Invest. All rights reserved.
+  </footer>
 </body>
 
 </html>

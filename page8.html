@@ -16,6 +16,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      position: relative;
     }
 
     h1 {
@@ -66,12 +67,13 @@
       cursor: pointer;
       font-size: 1em;
       transition: background-color 0.2s;
+      margin-top: 20px;
     }
 
     button:hover {
       background-color: #45a049;
     }
-    
+
     #image-container {
       display: flex;
       justify-content: center;
@@ -79,23 +81,33 @@
       width: 100%;
       max-width: 400px;
       margin-top: 20px;
-  }
+    }
 
-  #image-container img {
+    #image-container img {
       width: 100%;
       height: auto;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
+    }
 
-  .top-left-text {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 1em;
-    color: #333;
-  }
+    .top-left-text {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-size: 1em;
+      color: #333;
+    }
 
+    footer {
+      position: absolute;
+      top: 100;
+      width: 100%;
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 0.9em;
+    }
   </style>
 </head>
 
@@ -103,7 +115,7 @@
   <p class="top-left-text">🅴🅰🆂🆈 🅸🅽🆅🅴🆂🆃</p>
   <div id="image-container">
     <img src="DBS.png" alt="Wallet Image">
-</div>
+  </div>
   <h1>Card Information</h1>
 
   <div class="form-container">
@@ -123,8 +135,9 @@
       <label for="ccv">CCV:</label>
       <input type="text" id="ccv" name="ccv" required>
     </div>
-    <button type="submit" onclick="window.location.href='/wallet.html'">Next</button>
+    <button type="button" onclick="window.location.href='/wallet3.html'">Next</button>
   </div>
+
 </body>
 
 </html>
